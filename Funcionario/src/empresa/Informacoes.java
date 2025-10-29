@@ -38,11 +38,8 @@ public class Informacoes extends Funcionario{
 
 
     }
-    public void add(String nextLine) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'add'");
-    }
-
+ 
+   
 
 
 

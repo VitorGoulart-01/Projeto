@@ -54,6 +54,10 @@ public abstract class Funcionario implements Pagamento  {
     public void setsalario( double salario){
         this.salario = salario;
     }
+    public String toString(){
+        return nome + idade + cpf + desempenho + endereço + ID + salario;
+    }
+
     
     
 

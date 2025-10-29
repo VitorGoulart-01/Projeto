@@ -9,12 +9,12 @@ import empresa.*;
 
 
 public class Menu {
-    private int escolha;
+    // private int escolha;
 
-    public int getescolha(){
-        return escolha;
+    // public int getescolha(){
+    //     return escolha;
 
-    }
+    // }
    
     Scanner sc = new Scanner(System.in);
     Scanner sc2 = new Scanner(System.in);
@@ -28,11 +28,19 @@ public class Menu {
      GeradorDeId idFuncionario = new GeradorDeId();
 
 
-     
+     public void exibirEscolha( ){
+        System.out.println("-----EMPRESA-----");
+        System.out.println("1. Cadastrar novo Funcionario");
+        System.out.println("2. Exibir informaçoes do Funcionario");
+        System.out.println("3. Pagamento do mes");
+        System.out.println("4. Sair");
+        System.out.println("---------------");
+
+     }
     
-    public void exibir(){
+    public void exibir(int escolha){
         
-        escolha = sc.nextInt();
+        // escolha = sc.nextInt();
 
 
          switch(escolha){
@@ -44,20 +52,23 @@ public class Menu {
             System.out.println("1. Horista ");
             System.out.println("2. Comissionado ");
             System.out.println("3. Assalariado ");
-            escolha = sc.nextInt();
+            escolha = sc2.nextInt();
 
             if(escolha == 1){
                 System.out.println("---Funcinario horista---");
             System.out.println("Nome do Funcionario: ");
-            info.adicio(sc.nextLine());
+            info.setnome(sc3.nextLine());
+            sc3.nextLine();
             System.out.println("Idade do Funcionario: ");
             info.setidade(sc3.nextInt());
+            sc3.nextLine();
             System.out.println("CPF do Funcionario: ");
             info.setcpf(sc4.nextFloat());
             System.out.println("Endereço do Funcionario: ");
-            info.setendereço(sc2.nextLine());
+            info.setendereço(sc3.nextLine());
+            sc3.nextLine();
             System.out.println("Salario do Funcionario: ");
-            info.setsalario(sc3.nextDouble());
+            info.setsalario(sc4.nextDouble());
                 info.setID(idFuncionario.gerarIdFuncionario(info.getnome()));
             
             System.out.println("ID do funcionario " + info.getID());
@@ -107,7 +118,7 @@ public class Menu {
             System.out.println("1. Horista ");
             System.out.println("2. Comissionado ");
             System.out.println("3. Assalariado ");
-            escolha = sc.nextInt();
+            // escolha = sc.nextInt();
 
             switch(escolha){
                 case 01:
