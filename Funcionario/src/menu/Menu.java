@@ -7,6 +7,7 @@ import empresa.*;
 
 
 
+
 public class Menu {
     private int escolha;
 
@@ -21,7 +22,7 @@ public class Menu {
     Scanner sc4 = new Scanner(System.in);
 
     Funcionario comi = new Comissionado(null, 0, 0, 9, null, null, 0);
-    Funcionario hori = new Horista(null, 0, 0, 9, null, null, 0);
+   Informacoes info = new Informacoes(null, 0, 0, 9, null, null, 0);
     Funcionario assa = new Assalariado(null, 0, 0, 9, null, null, 0);
 
      GeradorDeId idFuncionario = new GeradorDeId();
@@ -48,18 +49,18 @@ public class Menu {
             if(escolha == 1){
                 System.out.println("---Funcinario horista---");
             System.out.println("Nome do Funcionario: ");
-            hori.setnome(sc2.nextLine());
+            info.adicio(sc.nextLine());
             System.out.println("Idade do Funcionario: ");
-            hori.setidade(sc3.nextInt());
+            info.setidade(sc3.nextInt());
             System.out.println("CPF do Funcionario: ");
-            hori.setcpf(sc4.nextFloat());
+            info.setcpf(sc4.nextFloat());
             System.out.println("Endereço do Funcionario: ");
-            hori.setendereço(sc2.nextLine());
+            info.setendereço(sc2.nextLine());
             System.out.println("Salario do Funcionario: ");
-            hori.setsalario(sc3.nextDouble());
-           hori.setID(GeradorDeId.gerarIdFuncionario(hori.getnome()));
+            info.setsalario(sc3.nextDouble());
+                info.setID(idFuncionario.gerarIdFuncionario(info.getnome()));
             
-            System.out.println("ID do funcionario " + hori.getID());
+            System.out.println("ID do funcionario " + info.getID());
             escolha = 0;
 
             }else if(escolha == 2){
@@ -110,7 +111,8 @@ public class Menu {
 
             switch(escolha){
                 case 01:
-                System.out.println(hori.getnome());
+                    info.exibirFuncionario();
+
             }
             break;
 
