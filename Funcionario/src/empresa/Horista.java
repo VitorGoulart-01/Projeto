@@ -38,6 +38,18 @@ public class Horista extends Funcionario{
 
 
     }
+    public void exibirinformaçoes(){
+        System.out.println(this.nome);
+        System.out.println(this.idade);
+        System.out.println(this.cpf);
+        System.out.println(this.endereço);
+        System.out.println(this.ID);
+        System.out.println(this.salario);
+        System.out.println(this.desempenho);
+
+
+
+    }
     
 
     

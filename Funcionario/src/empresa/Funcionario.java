@@ -10,6 +10,7 @@ public abstract class Funcionario implements Pagamento  {
     protected String ID;
     protected double salario;
     
+    
 
     public Funcionario(String nome, int idade, float cpf, int desempenho, String endereço, String ID, double salario){
         //contrutor para definir os valores do funcionario
@@ -25,9 +26,12 @@ public abstract class Funcionario implements Pagamento  {
     }
 
     public void pagamentoum(double valor){
-        
 
     }
+    
+
+    public abstract void  exibirinformcoes();
+    
     public void setnome(String nome){
 
         this.nome = nome;

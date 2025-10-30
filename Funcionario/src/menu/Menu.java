@@ -1,14 +1,17 @@
 package menu;
 import java.util.Scanner;
+import java.util.ArrayList;
 import empresa.*;
-
-
-
-
-
+import java.util.List;
 
 
 public class Menu {
+    private List<Funcionario> sistema;
+  
+
+
+
+
     // private int escolha;
 
     // public int getescolha(){
@@ -21,9 +24,10 @@ public class Menu {
     Scanner sc3 = new Scanner(System.in);
     Scanner sc4 = new Scanner(System.in);
 
-    Funcionario comi = new Comissionado(null, 0, 0, 9, null, null, 0);
-   Informacoes info = new Informacoes(null, 0, 0, 9, null, null, 0);
-    Funcionario assa = new Assalariado(null, 0, 0, 9, null, null, 0);
+    Comissionado comi;
+    //Informacoes info = new Informacoes(null, 0, 0, 9, null, null, 0);
+    Assalariado assa = new Assalariado(null, 0, 0, 9, null, null, 0);
+    sistema = new ArrayList<>();
 
      GeradorDeId idFuncionario = new GeradorDeId();
 
@@ -57,7 +61,7 @@ public class Menu {
             if(escolha == 1){
                 System.out.println("---Funcinario horista---");
             System.out.println("Nome do Funcionario: ");
-            info.setnome(sc3.nextLine());
+            ;
             sc3.nextLine();
             System.out.println("Idade do Funcionario: ");
             info.setidade(sc3.nextInt());
