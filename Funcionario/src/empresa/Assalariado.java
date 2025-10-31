@@ -1,25 +1,29 @@
 package empresa;
+import java.util.Scanner;
 
 public class Assalariado extends Funcionario  {
+    Scanner sc = new Scanner(System.in);
 
     
 
-    
-
-    public Assalariado (String nome, int idade, float cpf, int desempenho, String endereço, String ID, double salario ){
-        super(nome, idade, cpf,  desempenho,  endereço,  ID,  salario);
+    public Assalariado (String nome, int idade, float cpf, String endereço, String ID, double salario ){
+        super(nome, idade, cpf,  endereço,  ID,  salario);
 
     }
     
-    @Override
-    public void pagamentoum(double valor){//valor = bonus decido pelo empresa, que so e aplicado de acordo com desempenho do funcionario na empresa
+    //@Override
+    public void pagamentoum(double bonus){
+       System.out.println("Dar um Bonus ao Funcionario?\n " + "1. sim / 2. não");
+       int escolha = sc.nextInt();
+       
 
-        if(this.desempenho >= 8){
+
+        if(escolha == 1){
             this.salario =+ valor;
-            System.out.println("Funcionario teve Bom desempenho\n" +  " Salario: R$ "  + this.salario);
+            System.out.println("Funcionario Recebeu um bonus\n" +  " Salario: R$ "  + this.salario);
             
 
-        }else if(this.desempenho <=7 && this.desempenho >= 1){
+        }else if(escolha == 2 ){
             this.salario = 1518;
             System.out.println("Salario: R$ " + this.salario);
 
@@ -28,7 +32,7 @@ public class Assalariado extends Funcionario  {
 
         }
         
-        else if (this.desempenho == null || this.desempenho == 0 ){
+        else{
             System.out.println("Desempenho nao informado");
         }
         

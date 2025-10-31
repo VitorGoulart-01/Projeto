@@ -1,13 +1,13 @@
 package empresa;
-import java.util.Scanner;
+
 
 public class Comissionado extends Funcionario{
-    Scanner sc = new Scanner(System.in);
+    
 
     protected double taxa = 0.08; // %8
 
-    public Comissionado (String nome, int idade, float cpf, int desempenho, String endereço, String ID, double salario ){
-        super(nome, idade, cpf,  desempenho,  endereço,  ID,  salario);
+    public Comissionado (String nome, int idade, float cpf, String endereço, String ID, double salario ){
+        super(nome, idade, cpf, endereço,  ID,  salario);
 
 
     }
@@ -37,8 +37,21 @@ public class Comissionado extends Funcionario{
 
 
         }
+     
+        
         
 
+    }
+
+    public void exibirinformcoes(){
+
+        System.out.println(this.nome);
+        System.out.println(this.idade);
+        System.out.println(this.cpf);
+        System.out.println(this.endereço);
+        System.out.println(this.ID);
+        System.out.println(this.salario);
+       
     }
 
 }
